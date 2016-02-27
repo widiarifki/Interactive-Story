@@ -14,13 +14,16 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText mName = (EditText)findViewById(R.id.nameEditText);
-    private Button mStartButton = (Button)findViewById(R.id.startButton);
+    private EditText mName;
+    private Button mStartButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mName = (EditText)findViewById(R.id.nameEditText);
+        mStartButton = (Button)findViewById(R.id.startButton);
 
         mStartButton.setOnClickListener(new View.OnClickListener() {
             @Override
