@@ -31,17 +31,19 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String name = mName.getText().toString();
                 // lets call next activity
-                startStory();
+                startStory(name);
             }
         });
     }
 
     // lets create the startStory function to call next activity
     // type: void means it doesn't return anything
-    private void startStory(){
+    private void startStory(String name){
         // call the story activity by create new object from an android class called Intent
         // 'this' here refer to 'this class (MainActivity)'
         Intent intent = new Intent(this, StoryActivity.class);
+        // attach data to intent using method 'putExtra(var name, var value)'
+        intent.putExtra("name", name);
         // express the new intent by calling function 'startActivity'
         startActivity(intent);
     }
