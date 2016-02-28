@@ -43,7 +43,8 @@ public class MainActivity extends AppCompatActivity {
         // 'this' here refer to 'this class (MainActivity)'
         Intent intent = new Intent(this, StoryActivity.class);
         // attach data to intent using method 'putExtra(var name, var value)'
-        intent.putExtra("name", name);
+        // use the key name from string resources by using getString()
+        intent.putExtra(getString(R.string.key_name), name);
         // express the new intent by calling function 'startActivity'
         startActivity(intent);
     }
