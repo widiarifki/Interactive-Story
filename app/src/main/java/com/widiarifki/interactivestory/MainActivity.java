@@ -1,5 +1,6 @@
 package com.widiarifki.interactivestory;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -29,8 +30,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String name = mName.getText().toString();
-                Toast.makeText(MainActivity.this, name, Toast.LENGTH_LONG).show();
+                // lets call next activity
+                startStory();
             }
         });
+    }
+
+    // lets create the startStory function to call next activity
+    // type: void means it doesn't return anything
+    private void startStory(){
+        // call the story activity by create new object from an android class called Intent
+        // 'this' here refer to 'this class (MainActivity)'
+        Intent intent = new Intent(this, StoryActivity.class);
+        // express the new intent by calling function 'startActivity'
+        startActivity(intent);
     }
 }
