@@ -4,6 +4,7 @@
 /.idea/libraries
 /app/build/*
 /app/src/main/res/*
+!app/src/main/res/layout/
 /app/src/androidTest/*
 /app/src/test/*
 /build
@@ -11,3 +12,11 @@
 .DS_Store
 /captures
 /gradle
+*.iml
+*.gradle
+*.gitgnore
+*.pro
+*.properties
+*.bat
+gradlew
+.gitignore
