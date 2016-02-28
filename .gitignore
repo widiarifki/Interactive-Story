@@ -1,0 +1,13 @@
+.gradle
+/.idea/*
+/.idea/workspace.xml
+/.idea/libraries
+/app/build/*
+/app/src/main/res/*
+/app/src/androidTest/*
+/app/src/test/*
+/build
+/local.properties
+.DS_Store
+/captures
+/gradle
